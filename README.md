@@ -25,9 +25,10 @@ Steamにて無料配信中の片腕強盗FPS**『One-armed robber』**を日本�
 
 ## 📦 ダウンロード
 
-GitHubの [Releases](https://github.com/) ページ（または本フォルダ内）から最新の ZIP ファイルをダウンロードしてください：
+以下のリリースページから最新の ZIP ファイルをダウンロードしてください：
 
-- **`One-armed_robber_Japanese_Patch.zip`**
+- **[GitHub Releases (最新版)](https://github.com/yorukaze-luru/One-armed-robber-japanese/releases/latest)**
+- 直接ダウンロード: **[One-armed_robber_Japanese_Patch.zip](https://github.com/yorukaze-luru/One-armed-robber-japanese/releases/download/v1.0.0/One-armed_robber_Japanese_Patch.zip)**
 
 ---
 
