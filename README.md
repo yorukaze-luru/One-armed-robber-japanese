@@ -3,7 +3,7 @@
 [![Unreal Engine 4.27](https://img.shields.io/badge/Engine-Unreal%20Engine%204.27-blue.svg)](https://www.unrealengine.com/)
 [![Platform](https://img.shields.io/badge/Platform-Windows%20(Steam)-green.svg)](https://store.steampowered.com/app/2551020/Onearmed_robber/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Release](https://img.shields.io/badge/Release-v1.0.0-brightgreen.svg)](RELEASE_NOTES.md)
+[![Release](https://img.shields.io/badge/Release-v1.0.1-brightgreen.svg)](RELEASE_NOTES.md)
 
 Steamにて無料配信中の片腕強盗FPS**『One-armed robber』**を日本語化する非公式パッチです。  
 ゲーム内のUI、各種メニュー、設定項目、HUD、ダイアログ、チュートリアルなど、プレイに必要な210箇所以上のテキストを自然な日本語にローカライズします。
