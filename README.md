@@ -3,7 +3,7 @@
 [![Unreal Engine 4.27](https://img.shields.io/badge/Engine-Unreal%20Engine%204.27-blue.svg)](https://www.unrealengine.com/)
 [![Platform](https://img.shields.io/badge/Platform-Windows%20(Steam)-green.svg)](https://store.steampowered.com/app/2551020/Onearmed_robber/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Release](https://img.shields.io/badge/Release-v1.0.2-brightgreen.svg)](RELEASE_NOTES.md)
+[![Release](https://img.shields.io/badge/Release-v1.1.0-brightgreen.svg)](RELEASE_NOTES.md)
 
 Steamにて無料配信中の片腕強盗FPS**『One-armed robber』**を日本語化する非公式パッチです。  
 ゲーム内のUI、各種メニュー、設定項目、HUD、ダイアログ、チュートリアルなど、プレイに必要な210箇所以上のテキストを自然な日本語にローカライズします。
@@ -14,12 +14,12 @@ Steamにて無料配信中の片腕強盗FPS**『One-armed robber』**を日本�
 
 - **🎮 高視認性ユニバーサルデザインフォントを採用**  
   ゲーム内の英字フォントアセットを、モリサワ製の高品質UDフォント**「BIZ UDゴシック」**に置き換え。英数字のみならず、日本語（ひらがな・カタカナ・漢字）をクリアに美しく描画し、文字化けや「□（豆腐）」表示を完全防止します。
-- **🛡️ 安全な非破壊パッチ方式 (UE4標準パッチ機構)**  
-  元のゲームデータ（`OAR-WindowsNoEditor.pak` 等）を1バイトも書き換えません。UE4標準のパッチロード機構（`_P.pak`）を利用しているため、**Steamのファイル整合性チェックにも干渉せず**、パッチを削除すれば即座に元の英語に戻せます。
+- **🛡️ UI直接パッチング方式（Direct Asset Patching）による100%日本語反映**  
+  UE4のカルチャ設定や環境に依存せず、起動直後から100%確実にすべてのUIが日本語で表示されます。
+- **⚙️ 設定メニュー最下部に「言語設定項目」を追加**  
+  オリジナルの設定メニュー一番下に言語設定セクション（「言語 / Language: 日本語 (Japanese) [適用済み]」）を実装。
 - **⚡ ワンクリック自動インストール対応**  
   Steamのインストール先を自動検出するインストーラーバッチを同梱。PC操作に不慣れな方でもダブルクリックだけで導入・削除が可能です。手動でのドラッグ＆ドロップ導入にも対応しています。
-- **📜 210箇所以上の充実した日本語翻訳**  
-  メインメニュー、設定、ゲーム内HUD、通報アラート、ショップ、クレート、下準備ミッション、チュートリアルなど、主要な画面をくまなく日本語化しています。
 
 ---
 
@@ -28,7 +28,7 @@ Steamにて無料配信中の片腕強盗FPS**『One-armed robber』**を日本�
 以下のリリースページから最新の ZIP ファイルをダウンロードしてください：
 
 - **[GitHub Releases (最新版)](https://github.com/yorukaze-luru/One-armed-robber-japanese/releases/latest)**
-- 直接ダウンロード: **[One-armed_robber_Japanese_Patch.zip](https://github.com/yorukaze-luru/One-armed-robber-japanese/releases/download/v1.0.2/One-armed_robber_Japanese_Patch.zip)**
+- 直接ダウンロード: **[One-armed_robber_Japanese_Patch.zip](https://github.com/yorukaze-luru/One-armed-robber-japanese/releases/download/v1.1.0/One-armed_robber_Japanese_Patch.zip)**
 
 ---
 
