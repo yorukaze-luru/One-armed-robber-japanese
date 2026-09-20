@@ -3,10 +3,10 @@
 [![Unreal Engine 4.27](https://img.shields.io/badge/Engine-Unreal%20Engine%204.27-blue.svg)](https://www.unrealengine.com/)
 [![Platform](https://img.shields.io/badge/Platform-Windows%20(Steam)-green.svg)](https://store.steampowered.com/app/2551020/Onearmed_robber/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Release](https://img.shields.io/badge/Release-v1.1.2-brightgreen.svg)](RELEASE_NOTES.md)
+[![Release](https://img.shields.io/badge/Release-v1.1.3-brightgreen.svg)](RELEASE_NOTES.md)
 
 Steamにて無料配信中の片腕強盗FPS**『One-armed robber』**を日本語化する非公式パッチです。  
-ゲーム内のUI、メニュー、設定項目、HUD、ダイアログ、チュートリアル案内、ミッション目標指示など、プレイに必要なテキストを自然な日本語にローカライズします。
+ゲーム内のUI、メニュー、設定項目、HUD、ダイアログ、全ステージ名、全アイテム名、注視名、チュートリアル案内、ミッション目標指示など、プレイに必要なテキストを自然な日本語にローカライズします。
 
 ---
 
@@ -14,14 +14,16 @@ Steamにて無料配信中の片腕強盗FPS**『One-armed robber』**を日本�
 
 - **📂 手動でファイルを入れるだけで簡単導入**  
   解凍した `OAR` フォルダをゲームフォルダに入れるだけで、100%確実に日本語化が適用されます。余計なバッチやスクリプトは一切含みません。
+- **🎯 アイテム名＆全ステージ名も完全日本語化**  
+  強盗ツール（ドリル、C4、ピッキング等）、貴重品、武器、防具、マスク、衣装、エモート、スキル、そして全11ステージの名称・詳細説明がすべて日本語化されています。
+- **🚀 「ゲーム開始」ボタンの確実な日本語表示**  
+  動的バインディングにより英語に戻ってしまう現象を、ブループリント・バイトコード直接置換によって根本解決。「ゲーム開始」「準備完了」「準備解除」が確実に表示されます。
 - **🎓 チュートリアル＆全ミッション目標も完全日本語化**  
   マップ内の案内テキスト（ドリルの使い方、配電盤のショート、ダッフルバッグの詰め方等）や、画面上部のミッション目標指示もすべて日本語化されています。
 - **🎮 タイトルロゴは英語を維持**  
   メインメニューのタイトルロゴは英語（ONE-ARMED ROBBER）のまま表示され、スタイリッシュな雰囲気を保ちます。
 - **📐 フォントサイズの最適化調整済み**  
   日本語全角文字の視認性に合わせ、各UIのフォントサイズをバランスよくスケーリング調整。枠やボタンからはみ出さず、美しく読みやすいレイアウトを実現しました。
-- **🛡️ UI直接パッチング方式（Direct Asset Patching）による完全動作**  
-  UE4のカルチャ設定に依存せず、起動直後からすべてのUIが確実に日本語で表示されます。
 
 ---
 
@@ -30,7 +32,7 @@ Steamにて無料配信中の片腕強盗FPS**『One-armed robber』**を日本�
 以下のリリースページから最新の ZIP ファイルをダウンロードしてください：
 
 - **[GitHub Releases (最新版)](https://github.com/yorukaze-luru/One-armed-robber-japanese/releases/latest)**
-- 直接ダウンロード: **[One-armed_robber_Japanese_Patch.zip](https://github.com/yorukaze-luru/One-armed-robber-japanese/releases/download/v1.1.2/One-armed_robber_Japanese_Patch.zip)**
+- 直接ダウンロード: **[One-armed_robber_Japanese_Patch.zip](https://github.com/yorukaze-luru/One-armed-robber-japanese/releases/download/v1.1.3/One-armed_robber_Japanese_Patch.zip)**
 
 ---
 
@@ -60,11 +62,13 @@ Steamにて無料配信中の片腕強盗FPS**『One-armed robber』**を日本�
 
 | カテゴリ | 主な対応箇所 |
 | :--- | :--- |
-| **メインメニュー・ロビー** | プレイ、ゲーム開始、公開/非公開ロビー、ロビー検索、装備、ショップ、スキル、セットアップ、クレート、ゲーム終了 など |
+| **メインメニュー・ロビー** | プレイ、ゲーム開始、準備完了/解除、公開/非公開ロビー、ロビー検索、装備、ショップ、スキル、セットアップ、クレート、ゲーム終了 など |
+| **ステージ（マップ）** | ブラックダイヤモンド・カジノ、ペガサス美術館、宝石店、リバティ・ホーク銀行、豪邸、湾岸倉庫、エスコ・バー、オービタル銀行、郵便局、科学研究所、ワインショップ など |
+| **アイテム・貴重品・装備** | ドリル各種、C4爆薬、アングルグラインダー、ピッキング各種、ダッフルバッグ、金塊、現金、宝石、絵画、カジノチップ、武器アタッチメント、防具、マスク、衣装、エモート など |
 | **設定画面** | 操作設定、キー割り当て、視点感度、エイム感度、グラフィックス、最大FPS、視野角 (FOV)、モーションブラー、解像度スケール、各種音量、ボイスチャット方式 など |
 | **ゲーム内HUD・通知** | 獲得金額表示、立入禁止区域警告、市民の通報アラート、配電盤破壊目標、デバイスハッキング、ピッキング操作説明、クリアタイム、強盗成功/失敗リザルト など |
 | **チュートリアル＆目標指示** | ステルス／ラウドチュートリアルマップ内案内、全マップのミッション目標指示（Instructions）、ダッフルバッグ・配電盤ポップアップ など |
-| **ショップ・外見・装備** | ハイストコインショップ、武器・ツールカテゴリ、スキン、チャーム、クレート解錠、装備プレビュー など |
+| **スキルツリー** | 全スキル名称および能力詳細説明 など |
 
 ---
 
