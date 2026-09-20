@@ -3,7 +3,7 @@
 [![Unreal Engine 4.27](https://img.shields.io/badge/Engine-Unreal%20Engine%204.27-blue.svg)](https://www.unrealengine.com/)
 [![Platform](https://img.shields.io/badge/Platform-Windows%20(Steam)-green.svg)](https://store.steampowered.com/app/2551020/Onearmed_robber/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Release](https://img.shields.io/badge/Release-v1.1.0-brightgreen.svg)](RELEASE_NOTES.md)
+[![Release](https://img.shields.io/badge/Release-v1.1.1-brightgreen.svg)](RELEASE_NOTES.md)
 
 Steamにて無料配信中の片腕強盗FPS**『One-armed robber』**を日本語化する非公式パッチです。  
 ゲーム内のUI、各種メニュー、設定項目、HUD、ダイアログ、チュートリアルなど、プレイに必要な210箇所以上のテキストを自然な日本語にローカライズします。
@@ -12,14 +12,14 @@ Steamにて無料配信中の片腕強盗FPS**『One-armed robber』**を日本�
 
 ## 🌟 特徴
 
-- **🎮 高視認性ユニバーサルデザインフォントを採用**  
-  ゲーム内の英字フォントアセットを、モリサワ製の高品質UDフォント**「BIZ UDゴシック」**に置き換え。英数字のみならず、日本語（ひらがな・カタカナ・漢字）をクリアに美しく描画し、文字化けや「□（豆腐）」表示を完全防止します。
-- **🛡️ UI直接パッチング方式（Direct Asset Patching）による100%日本語反映**  
-  UE4のカルチャ設定や環境に依存せず、起動直後から100%確実にすべてのUIが日本語で表示されます。
-- **⚙️ 設定メニュー最下部に「言語設定項目」を追加**  
-  オリジナルの設定メニュー一番下に言語設定セクション（「言語 / Language: 日本語 (Japanese) [適用済み]」）を実装。
-- **⚡ ワンクリック自動インストール対応**  
-  Steamのインストール先を自動検出するインストーラーバッチを同梱。PC操作に不慣れな方でもダブルクリックだけで導入・削除が可能です。手動でのドラッグ＆ドロップ導入にも対応しています。
+- **📂 手動でファイルを入れるだけで簡単導入**  
+  パッチファイル（`OAR-WindowsNoEditor_Japanese_P.pak`）または `OAR` フォルダをゲームフォルダに入れるだけで、100%確実に日本語化が適用されます。
+- **🎮 フォントサイズの最適化調整済み**  
+  日本語全角文字の視認性に合わせ、各UIのフォントサイズをバランスよくスケーリング調整。枠やボタンからはみ出さず、美しく読みやすいレイアウトを実現しました。
+- **🛡️ UI直接パッチング方式（Direct Asset Patching）による完全動作**  
+  UE4のカルチャ設定に依存せず、起動直後からすべてのUIが確実に日本語で表示されます。
+- **⚙️ ゲーム本来のオリジナル設定メニューを忠実に維持**  
+  余計なカスタム項目は入れず、オリジナル通りの設定画面のまま日本語化されています。
 
 ---
 
@@ -28,27 +28,36 @@ Steamにて無料配信中の片腕強盗FPS**『One-armed robber』**を日本�
 以下のリリースページから最新の ZIP ファイルをダウンロードしてください：
 
 - **[GitHub Releases (最新版)](https://github.com/yorukaze-luru/One-armed-robber-japanese/releases/latest)**
-- 直接ダウンロード: **[One-armed_robber_Japanese_Patch.zip](https://github.com/yorukaze-luru/One-armed-robber-japanese/releases/download/v1.1.0/One-armed_robber_Japanese_Patch.zip)**
+- 直接ダウンロード: **[One-armed_robber_Japanese_Patch.zip](https://github.com/yorukaze-luru/One-armed-robber-japanese/releases/download/v1.1.1/One-armed_robber_Japanese_Patch.zip)**
 
 ---
 
-## 🛠️ インストール手順
+## 🛠️ インストール手順（手動導入）
 
-以下の**どちらかお好きな方法**で簡単に導入できます。
+ファイルをコピーするだけで簡単に導入できます。
 
-### 方法A：自動インストール（おすすめ・かんたん）
+### 方法1：OARフォルダをドラッグ＆ドロップ（超かんたん）
 
-1. ダウンロードした `One-armed_robber_Japanese_Patch.zip` を右クリックして「すべて展開」で解凍します。
-2. 解凍したフォルダ内にある **`[自動インストール] 日本語化パッチ適用.bat`** をダブルクリックして実行します。
-3. 自動的にゲームのインストール先が検出され、パッチが配置されます。
-4. 通常通りSteamまたは `OAR.exe` からゲームを起動してください。
+1. ダウンロードした `One-armed_robber_Japanese_Patch.zip` を解凍します。
+2. 解凍したフォルダ内にある **`OAR`** フォルダを、ゲームのインストールフォルダ（`OAR.exe` がある場所）にそのままドラッグ＆ドロップ（上書きコピー）してください。
+3. 通常通りゲームを起動すれば、日本語化が完了しています！
 
-### 方法B：手動インストール（フォルダをコピーするだけ）
+> [!TIP]
+> **Steam版の一般的なインストール先フォルダ：**  
+> `C:\Program Files (x86)\Steam\steamapps\common\One-armed robber\`  
+> （Steamライブラリでゲームを右クリック ➔「管理」➔「ローカルファイルを閲覧」で一発で開けます）
 
-1. `One-armed_robber_Japanese_Patch.zip` を解凍します。
-2. フォルダ内にある **`OAR`** フォルダを、ゲームのインストールフォルダ（`OAR.exe` がある階層）にそのままドラッグ＆ドロップ（上書きコピー）します。
-   - ※既存のファイルが上書きされることはありません。`OAR\Content\Paks` 内にパッチファイルが追加されるのみです。
-3. 通常通りゲームを起動してください。
+### 方法2：Pakファイルを直接入れる場合
+
+ゲームフォルダ内の `OAR\Content\Paks\` フォルダに、解凍フォルダ内の `【直接配置用】OAR-WindowsNoEditor_Japanese_P.pak` をコピーするだけでも完了します。
+
+※ワンクリックで導入したい方向けに、`[自動インストール] 日本語化パッチ適用.bat` も同梱しています。
+
+---
+
+## 🗑️ アンインストール手順（元の英語に戻す場合）
+
+ゲームフォルダ内の `OAR\Content\Paks\OAR-WindowsNoEditor_Japanese_P.pak` を削除するだけで、いつでも元の英語に戻せます。
 
 > [!TIP]
 > **Steam版の一般的なインストール先フォルダ：**  
