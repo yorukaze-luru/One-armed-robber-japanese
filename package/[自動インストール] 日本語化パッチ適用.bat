@@ -1,79 +1,107 @@
 @echo off
-chcp 65001 > nul
 setlocal enabledelayedexpansion
+title One-armed robber “ú–{Œê‰»ƒpƒbƒ` ƒCƒ“ƒXƒg[ƒ‰[
 
 echo ========================================================
-echo   One-armed robber æ—¥æœ¬èªåŒ–ãƒ‘ãƒƒãƒ è‡ªå‹•ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ©ãƒ¼
+echo   One-armed robber “ú–{Œê‰»ƒpƒbƒ` ©“®ƒCƒ“ƒXƒg[ƒ‰[
 echo ========================================================
 echo.
 
 set PATCH_PAK=%~dp0OAR\Content\Paks\OAR-WindowsNoEditor_Japanese_P.pak
 
 if not exist "!PATCH_PAK!" (
-    echo [ã‚¨ãƒ©ãƒ¼] ãƒ‘ãƒƒãƒæœ¬ä½“ãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“ã€‚
-    echo è§£å‡ã—ãŸãƒ•ã‚©ãƒ«ãƒ€ã®æ§‹æˆã‚’å¤‰æ›´ã›ãšã«å®Ÿè¡Œã—ã¦ãã ã•ã„ã€‚
+    echo [ƒGƒ‰[] ƒpƒbƒ`–{‘Ì‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñB
+    echo ‰ğ“€‚µ‚½ƒtƒHƒ‹ƒ_‚Ì\¬‚ğ•ÏX‚¹‚¸‚ÉÀs‚µ‚Ä‚­‚¾‚³‚¢B
     echo.
+    powershell -WindowStyle Hidden -Command "[void][System.Reflection.Assembly]::LoadWithPartialName('System.Windows.Forms'); [System.Windows.Forms.MessageBox]::Show('ƒpƒbƒ`–{‘ÌiOAR-WindowsNoEditor_Japanese_P.pakj‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñB`n‰ğ“€‚µ‚½ƒtƒHƒ‹ƒ_‚Ì\¬‚ğ•ÏX‚¹‚¸‚ÉÀs‚µ‚Ä‚­‚¾‚³‚¢B', 'ƒGƒ‰[', 0, 16)"
     pause
     exit /b 1
 )
 
-:: 1. åŒã˜ãƒ•ã‚©ãƒ«ãƒ€ã«ã‚²ãƒ¼ãƒ æœ¬ä½“ãŒã‚ã‚‹ã‹ç¢ºèª
+:: 1. “¯‚¶ƒtƒHƒ‹ƒ_‚ÉƒQ[ƒ€–{‘Ì‚ª‚ ‚é‚©Šm”F
 if exist "%~dp0OAR.exe" (
     set TARGET_DIR=%~dp0
     goto :INSTALL
 )
 
-:: 2. ãƒ¦ãƒ¼ã‚¶ãƒ¼ã®ãƒ‡ã‚¹ã‚¯ãƒˆãƒƒãƒ—ä¸Šã®ãƒ•ã‚©ãƒ«ãƒ€ã‚’ç¢ºèª
+:: 2. ƒfƒXƒNƒgƒbƒvã‚ÌƒtƒHƒ‹ƒ_‚ğŠm”F
 if exist "%USERPROFILE%\Desktop\One-armed robber\OAR.exe" (
     set TARGET_DIR=%USERPROFILE%\Desktop\One-armed robber\
     goto :INSTALL
 )
 
-:: 3. Steamã®æ¨™æº–ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«å…ˆã‚’ç¢ºèª
+:: 3. Steam‚Ì•W€ƒCƒ“ƒXƒg[ƒ‹æ‚ğŠm”F
 if exist "C:\Program Files (x86)\Steam\steamapps\common\One-armed robber\OAR.exe" (
     set TARGET_DIR=C:\Program Files (x86)\Steam\steamapps\common\One-armed robber\
     goto :INSTALL
 )
 
-:: 4. è¦‹ã¤ã‹ã‚‰ãªã„å ´åˆã¯å…¥åŠ›ã‚’ä¿ƒã™
-echo ã‚²ãƒ¼ãƒ ã®ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«å…ˆã‚’è‡ªå‹•æ¤œå‡ºã§ãã¾ã›ã‚“ã§ã—ãŸã€‚
+:: 4. Steam‚Ì•Êƒhƒ‰ƒCƒu (Dƒhƒ‰ƒCƒu“™) ‚ğŠm”F
+for %%D in (D E F G) do (
+    if exist "%%D:\SteamLibrary\steamapps\common\One-armed robber\OAR.exe" (
+        set TARGET_DIR=%%D:\SteamLibrary\steamapps\common\One-armed robber\
+        goto :INSTALL
+    )
+)
+
+:: 5. Œ©‚Â‚©‚ç‚È‚¢ê‡‚Í“ü—Í‚ğ‘£‚·
+echo ƒQ[ƒ€‚ÌƒCƒ“ƒXƒg[ƒ‹æ‚ğ©“®ŒŸo‚Å‚«‚Ü‚¹‚ñ‚Å‚µ‚½B
 echo.
-echo ã€One-armed robberã€ã®ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ãƒ•ã‚©ãƒ«ãƒ€ï¼ˆOAR.exe ãŒã‚ã‚‹ãƒ•ã‚©ãƒ«ãƒ€ï¼‰ã®ãƒ‘ã‚¹ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚
-echo ï¼ˆãƒ•ã‚©ãƒ«ãƒ€ã‚’ã“ã®ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã«ãƒ‰ãƒ©ãƒƒã‚°ï¼†ãƒ‰ãƒ­ãƒƒãƒ—ã—ã¦ã‚‚å…¥åŠ›ã§ãã¾ã™ï¼‰
+echo wOne-armed robberx‚ÌƒCƒ“ƒXƒg[ƒ‹ƒtƒHƒ‹ƒ_iOAR.exe ‚ª‚ ‚éƒtƒHƒ‹ƒ_j‚ÌƒpƒX‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢B
+echo iƒtƒHƒ‹ƒ_‚ğ‚±‚ÌƒEƒBƒ“ƒhƒE‚Éƒhƒ‰ƒbƒO•ƒhƒƒbƒv‚µ‚Ä‚à“ü—Í‚Å‚«‚Ü‚·j
 echo.
-set /p TARGET_DIR="ãƒ•ã‚©ãƒ«ãƒ€ãƒ‘ã‚¹: "
+set /p TARGET_DIR="ƒtƒHƒ‹ƒ_ƒpƒX: "
 set TARGET_DIR=!TARGET_DIR:"=!
 
 if not exist "!TARGET_DIR!\OAR.exe" (
     echo.
-    echo [ã‚¨ãƒ©ãƒ¼] æŒ‡å®šã•ã‚ŒãŸãƒ•ã‚©ãƒ«ãƒ€ã« OAR.exe ãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“ã§ã—ãŸã€‚
-    echo ãƒ‘ã‚¹ã‚’ç¢ºèªã—ã¦å†åº¦ãŠè©¦ã—ãã ã•ã„ã€‚
+    echo [ƒGƒ‰[] w’è‚³‚ê‚½ƒtƒHƒ‹ƒ_‚É OAR.exe ‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñ‚Å‚µ‚½B
+    echo ƒpƒX‚ğŠm”F‚µ‚ÄÄ“x‚¨‚µ‚­‚¾‚³‚¢B
     echo.
+    powershell -WindowStyle Hidden -Command "[void][System.Reflection.Assembly]::LoadWithPartialName('System.Windows.Forms'); [System.Windows.Forms.MessageBox]::Show('w’è‚³‚ê‚½ƒtƒHƒ‹ƒ_‚É OAR.exe ‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñ‚Å‚µ‚½B`nƒpƒX‚ğŠm”F‚µ‚ÄÄ“x‚¨‚µ‚­‚¾‚³‚¢B', 'ƒGƒ‰[', 0, 16)"
     pause
     exit /b 1
 )
 
 :INSTALL
 echo.
-echo ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«å…ˆ: "!TARGET_DIR!"
-echo ãƒ‘ãƒƒãƒãƒ•ã‚¡ã‚¤ãƒ«ã‚’ã‚³ãƒ”ãƒ¼ã—ã¦ã„ã¾ã™...
+echo ƒCƒ“ƒXƒg[ƒ‹æ: "!TARGET_DIR!"
+echo.
 
-if not exist "!TARGET_DIR!\OAR\Content\Paks" (
-    mkdir "!TARGET_DIR!\OAR\Content\Paks" > nul 2>&1
+set PAKS_DIR=!TARGET_DIR!\OAR\Content\Paks
+set BACKUP_DIR=!PAKS_DIR!\backup
+
+if not exist "!PAKS_DIR!" (
+    mkdir "!PAKS_DIR!" > nul 2>&1
 )
 
-copy /Y "!PATCH_PAK!" "!TARGET_DIR!\OAR\Content\Paks\OAR-WindowsNoEditor_Japanese_P.pak" > nul
+:: ƒoƒbƒNƒAƒbƒvƒtƒHƒ‹ƒ_‚ğì¬
+if not exist "!BACKUP_DIR!" (
+    mkdir "!BACKUP_DIR!" > nul 2>&1
+)
 
-if exist "!TARGET_DIR!\OAR\Content\Paks\OAR-WindowsNoEditor_Japanese_P.pak" (
+:: Šù‘¶‚Ìƒpƒbƒ`ƒtƒ@ƒCƒ‹‚ª‚ ‚éê‡‚ÍƒoƒbƒNƒAƒbƒvƒtƒHƒ‹ƒ_‚É‘Ş”ğ
+if exist "!PAKS_DIR!\OAR-WindowsNoEditor_Japanese_P.pak" (
+    echo Šù‘¶‚Ìƒpƒbƒ`ƒtƒ@ƒCƒ‹‚ğ backup ƒtƒHƒ‹ƒ_‚É‘Ş”ğ‚µ‚Ä‚¢‚Ü‚·...
+    move /Y "!PAKS_DIR!\OAR-WindowsNoEditor_Japanese_P.pak" "!BACKUP_DIR!\" > nul 2>&1
+)
+
+echo “ú–{Œê‰»ƒpƒbƒ`ƒtƒ@ƒCƒ‹‚ğ”z’u‚µ‚Ä‚¢‚Ü‚·...
+copy /Y "!PATCH_PAK!" "!PAKS_DIR!\OAR-WindowsNoEditor_Japanese_P.pak" > nul
+
+if exist "!PAKS_DIR!\OAR-WindowsNoEditor_Japanese_P.pak" (
     echo.
     echo ========================================================
-    echo   æ—¥æœ¬èªåŒ–ãƒ‘ãƒƒãƒã®ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ãŒå®Œäº†ã—ã¾ã—ãŸï¼
-    echo   ã‚²ãƒ¼ãƒ ã‚’èµ·å‹•ã—ã¦æ—¥æœ¬èªè¡¨ç¤ºã‚’ãŠæ¥½ã—ã¿ãã ã•ã„ã€‚
+    echo   “ú–{Œê‰»ƒpƒbƒ`‚ÌƒCƒ“ƒXƒg[ƒ‹‚ªŠ®—¹‚µ‚Ü‚µ‚½I
+    echo   ƒQ[ƒ€‚ğ‹N“®‚µ‚Ä“ú–{Œê•\¦‚ğ‚¨Šy‚µ‚İ‚­‚¾‚³‚¢B
     echo ========================================================
+    echo.
+    powershell -WindowStyle Hidden -Command "[void][System.Reflection.Assembly]::LoadWithPartialName('System.Windows.Forms'); [System.Windows.Forms.MessageBox]::Show('“ú–{Œê‰»ƒpƒbƒ`‚Ì“K—p‚ª³í‚ÉŠ®—¹‚µ‚Ü‚µ‚½I`n`nƒQ[ƒ€‚ğ‹N“®‚µ‚Ä“ú–{Œê•\¦‚ğ‚¨Šy‚µ‚İ‚­‚¾‚³‚¢B', 'One-armed robber “ú–{Œê‰»ƒpƒbƒ`', 0, 64)"
 ) else (
     echo.
-    echo [ã‚¨ãƒ©ãƒ¼] ã‚³ãƒ”ãƒ¼ã«å¤±æ•—ã—ã¾ã—ãŸã€‚ç®¡ç†è€…æ¨©é™ã§å®Ÿè¡Œã—ã¦ãã ã•ã„ã€‚
+    echo [ƒGƒ‰[] ƒRƒs[‚É¸”s‚µ‚Ü‚µ‚½BŠÇ—ÒŒ ŒÀ‚ÅÀs‚µ‚Ä‚­‚¾‚³‚¢B
+    echo.
+    powershell -WindowStyle Hidden -Command "[void][System.Reflection.Assembly]::LoadWithPartialName('System.Windows.Forms'); [System.Windows.Forms.MessageBox]::Show('ƒpƒbƒ`ƒtƒ@ƒCƒ‹‚ÌƒRƒs[‚É¸”s‚µ‚Ü‚µ‚½B`nŠÇ—ÒŒ ŒÀ‚ÅÀs‚·‚é‚©AƒZƒLƒ…ƒŠƒeƒBƒ\ƒtƒg‚Ìİ’è‚ğ‚²Šm”F‚­‚¾‚³‚¢B', 'ƒGƒ‰[', 0, 16)"
 )
 
-echo.
 pause

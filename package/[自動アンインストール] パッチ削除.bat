@@ -1,53 +1,67 @@
 @echo off
-chcp 65001 > nul
 setlocal enabledelayedexpansion
+title One-armed robber “ú–{Œê‰»ƒpƒbƒ` ƒAƒ“ƒCƒ“ƒXƒg[ƒ‰[
 
 echo ========================================================
-echo   One-armed robber æ—¥æœ¬èªåŒ–ãƒ‘ãƒƒãƒ ã‚¢ãƒ³ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ©ãƒ¼
+echo   One-armed robber “ú–{Œê‰»ƒpƒbƒ` ƒAƒ“ƒCƒ“ƒXƒg[ƒ‰[
 echo ========================================================
 echo.
 
-set TARGET_DIR=
-
-:: 1. åŒã˜ãƒ•ã‚©ãƒ«ãƒ€ã«ã‚²ãƒ¼ãƒ æœ¬ä½“ãŒã‚ã‚‹ã‹ç¢ºèª
+:: 1. “¯‚¶ƒtƒHƒ‹ƒ_‚ÉƒQ[ƒ€–{‘Ì‚ª‚ ‚é‚©Šm”F
 if exist "%~dp0OAR.exe" (
     set TARGET_DIR=%~dp0
     goto :UNINSTALL
 )
 
-:: 2. ãƒ¦ãƒ¼ã‚¶ãƒ¼ã®ãƒ‡ã‚¹ã‚¯ãƒˆãƒƒãƒ—ä¸Šã®ãƒ•ã‚©ãƒ«ãƒ€ã‚’ç¢ºèª
+:: 2. ƒfƒXƒNƒgƒbƒvã‚ÌƒtƒHƒ‹ƒ_‚ğŠm”F
 if exist "%USERPROFILE%\Desktop\One-armed robber\OAR.exe" (
     set TARGET_DIR=%USERPROFILE%\Desktop\One-armed robber\
     goto :UNINSTALL
 )
 
-:: 3. Steamã®æ¨™æº–ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«å…ˆã‚’ç¢ºèª
+:: 3. Steam‚Ì•W€ƒCƒ“ƒXƒg[ƒ‹æ‚ğŠm”F
 if exist "C:\Program Files (x86)\Steam\steamapps\common\One-armed robber\OAR.exe" (
     set TARGET_DIR=C:\Program Files (x86)\Steam\steamapps\common\One-armed robber\
     goto :UNINSTALL
 )
 
-:: 4. è¦‹ã¤ã‹ã‚‰ãªã„å ´åˆã¯å…¥åŠ›ã‚’ä¿ƒã™
-echo ã‚²ãƒ¼ãƒ ã®ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«å…ˆã‚’è‡ªå‹•æ¤œå‡ºã§ãã¾ã›ã‚“ã§ã—ãŸã€‚
-echo.
-echo ã€One-armed robberã€ã®ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ãƒ•ã‚©ãƒ«ãƒ€ï¼ˆOAR.exe ãŒã‚ã‚‹ãƒ•ã‚©ãƒ«ãƒ€ï¼‰ã®ãƒ‘ã‚¹ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚
-echo.
-set /p TARGET_DIR="ãƒ•ã‚©ãƒ«ãƒ€ãƒ‘ã‚¹: "
-set TARGET_DIR=!TARGET_DIR:"=!
-
-:UNINSTALL
-set PAK_PATH=!TARGET_DIR!\OAR\Content\Paks\OAR-WindowsNoEditor_Japanese_P.pak
-
-if exist "!PAK_PATH!" (
-    del /F /Q "!PAK_PATH!"
-    echo.
-    echo ========================================================
-    echo   æ—¥æœ¬èªåŒ–ãƒ‘ãƒƒãƒã‚’å‰Šé™¤ã—ã€å…ƒã®è‹±èªçŠ¶æ…‹ã«æˆ»ã—ã¾ã—ãŸã€‚
-    echo ========================================================
-) else (
-    echo.
-    echo æ—¥æœ¬èªåŒ–ãƒ‘ãƒƒãƒã¯è¦‹ã¤ã‹ã‚Šã¾ã›ã‚“ã§ã—ãŸã€‚ï¼ˆæ—¢ã«å‰Šé™¤ã•ã‚Œã¦ã„ã‚‹ã‹ã€æœªå°å…¥ã§ã™ï¼‰
+:: 4. Steam‚Ì•Êƒhƒ‰ƒCƒu‚ğŠm”F
+for %%D in (D E F G) do (
+    if exist "%%D:\SteamLibrary\steamapps\common\One-armed robber\OAR.exe" (
+        set TARGET_DIR=%%D:\SteamLibrary\steamapps\common\One-armed robber\
+        goto :UNINSTALL
+    )
 )
 
+:: 5. Œ©‚Â‚©‚ç‚È‚¢ê‡‚Í“ü—Í‚ğ‘£‚·
+echo ƒQ[ƒ€‚ÌƒCƒ“ƒXƒg[ƒ‹æ‚ğ©“®ŒŸo‚Å‚«‚Ü‚¹‚ñ‚Å‚µ‚½B
+echo wOne-armed robberx‚ÌƒCƒ“ƒXƒg[ƒ‹ƒtƒHƒ‹ƒ_iOAR.exe ‚ª‚ ‚éƒtƒHƒ‹ƒ_j‚ÌƒpƒX‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢B
 echo.
+set /p TARGET_DIR="ƒtƒHƒ‹ƒ_ƒpƒX: "
+set TARGET_DIR=!TARGET_DIR:"=!
+
+if not exist "!TARGET_DIR!\OAR.exe" (
+    echo [ƒGƒ‰[] w’è‚³‚ê‚½ƒtƒHƒ‹ƒ_‚É OAR.exe ‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñ‚Å‚µ‚½B
+    pause
+    exit /b 1
+)
+
+:UNINSTALL
+set PAK_FILE=!TARGET_DIR!\OAR\Content\Paks\OAR-WindowsNoEditor_Japanese_P.pak
+
+if exist "!PAK_FILE!" (
+    del /f /q "!PAK_FILE!" > nul 2>&1
+    echo.
+    echo ========================================================
+    echo   “ú–{Œê‰»ƒpƒbƒ`‚ğíœ‚µ‚Ü‚µ‚½B
+    echo   ƒQ[ƒ€‚ÍŒ³‚Ìó‘Ô‚É–ß‚è‚Ü‚µ‚½B
+    echo ========================================================
+    echo.
+    powershell -WindowStyle Hidden -Command "[void][System.Reflection.Assembly]::LoadWithPartialName('System.Windows.Forms'); [System.Windows.Forms.MessageBox]::Show('“ú–{Œê‰»ƒpƒbƒ`‚Ìíœ‚ªŠ®—¹‚µ‚Ü‚µ‚½B`n`nƒQ[ƒ€‚ÍŒ³‚Ì‰pŒêó‘Ô‚É–ß‚è‚Ü‚µ‚½B', 'One-armed robber “ú–{Œê‰»ƒpƒbƒ`', 0, 64)"
+) else (
+    echo [ˆÄ“à] “ú–{Œê‰»ƒpƒbƒ`ƒtƒ@ƒCƒ‹‚ÍŒ©‚Â‚©‚è‚Ü‚¹‚ñ‚Å‚µ‚½Bi‚·‚Å‚Éíœ‚³‚ê‚Ä‚¢‚Ü‚·j
+    echo.
+    powershell -WindowStyle Hidden -Command "[void][System.Reflection.Assembly]::LoadWithPartialName('System.Windows.Forms'); [System.Windows.Forms.MessageBox]::Show('“ú–{Œê‰»ƒpƒbƒ`ƒtƒ@ƒCƒ‹‚ÍŒ©‚Â‚©‚è‚Ü‚¹‚ñ‚Å‚µ‚½B`n‚·‚Å‚ÉŒ³‚Ìó‘Ô‚É–ß‚Á‚Ä‚¢‚Ü‚·B', 'One-armed robber “ú–{Œê‰»ƒpƒbƒ`', 0, 64)"
+)
+
 pause
