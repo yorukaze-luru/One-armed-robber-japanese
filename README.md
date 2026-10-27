@@ -3,14 +3,14 @@
 [![Unreal Engine 4.27](https://img.shields.io/badge/Engine-Unreal%20Engine%204.27-blue.svg)](https://www.unrealengine.com/)
 [![Platform](https://img.shields.io/badge/Platform-Windows%20(Steam)-green.svg)](https://store.steampowered.com/app/2551020/Onearmed_robber/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Release](https://img.shields.io/badge/Release-v2.0.1-brightgreen.svg)](RELEASE_NOTES.md)
+[![Release](https://img.shields.io/badge/Release-v2.0.2-brightgreen.svg)](RELEASE_NOTES.md)
 
 Steamにて無料配信中の片腕強盗FPS**『One-armed robber』**の最新バージョンを完全日本語化する非公式パッチです。  
 ゲーム内のUI、メニュー、設定項目、キーバインド設定、HUD、ダイアログ、新マップ「データセンター」を含む全ステージ名・目標指示、セットアップ、クレート・武器スキン＆チャーム、全アイテム名・注視名、スキル効果説明など、プレイに必要なあらゆるテキストを自然な日本語にローカライズします。
 
 ---
 
-## 🌟 特徴 (v2.0.1)
+## 🌟 特徴 (v2.0.2)
 
 - **📂 ゲームフォルダに入れるだけで簡単導入**  
   解凍した `OAR` フォルダをゲームフォルダに入れるだけで、即座に日本語化が適用されます。余計なバッチやスクリプトは一切含みません。
@@ -29,8 +29,8 @@ Steamにて無料配信中の片腕強盗FPS**『One-armed robber』**の最新�
 
 以下のリリースページから最新の ZIP ファイルをダウンロードしてください：
 
-- **[GitHub Releases (最新版 v2.0.1)](https://github.com/yorukaze-luru/One-armed-robber-japanese/releases/latest)**
-- 直接ダウンロード: **[One-armed_robber_Japanese_Patch.zip](https://github.com/yorukaze-luru/One-armed-robber-japanese/releases/download/v2.0.1/One-armed_robber_Japanese_Patch.zip)**
+- **[GitHub Releases (最新版 v2.0.2)](https://github.com/yorukaze-luru/One-armed-robber-japanese/releases/latest)**
+- 直接ダウンロード: **[One-armed_robber_Japanese_Patch.zip](https://github.com/yorukaze-luru/One-armed-robber-japanese/releases/download/v2.0.2/One-armed_robber_Japanese_Patch.zip)**
 
 ---
 
@@ -76,7 +76,7 @@ Steamにて無料配信中の片腕強盗FPS**『One-armed robber』**の最新�
 
 <details>
 <summary><b>Q. ゲームのアップデートがあった場合はどうなりますか？</b></summary>
-パッチは独立したPakファイル（<code>_P.pak</code>）として動作します。v2.0.1では最新の「データセンター」アップデートに完全対応しています。
+パッチは独立したPakファイル（<code>_P.pak</code>）として動作します。v2.0.2では最新の「データセンター」アップデートに完全対応しています。
 </details>
 
 <details>
